@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class lab1
+{
+
+        private static boolean palindrome(String futPal)
+        {
+            boolean torf = true;
+            for (int i = 0; i < futPal.length() / 2; i++) {
+                if (futPal.charAt(i) != futPal.charAt(futPal.length() - i - 1))
+                {
+                    torf = false;
+                    break;
+                }
+            }
+            return torf;
+
+        }
+        public static void main(String[] args)
+        {
+            Scanner src = new Scanner(System.in);
+            System.out.println("Enter u number");
+            int number = src.nextInt();
+            if(palindrome(Integer.toString(number)) == true)
+            {
+                System.out.println("Good Job");
+            }else{
+                System.out.println("Sad story with this number");
+            }
+        }
+
+    }
