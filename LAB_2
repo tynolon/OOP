@@ -1,0 +1,43 @@
+public class Rectangle
+{
+    private int length;
+    private int witdth;
+
+    private Rectangle(int length, int witdth)
+    {
+        this.length = length;
+        this.witdth = witdth;
+    }
+
+    public void setLength(int length)
+    {
+        if(length > 0 && length <= 20)
+        {
+            this.length = length;
+        }else{
+            System.out.println("Invalid value");
+        }
+    }
+    public void setWitdth(int witdth)
+    {
+        if(witdth > 0 && witdth <= 20)
+        {
+            this.witdth = witdth;
+        }else{
+            System.out.println("Invalid value");
+        }
+    }
+    public int getLength()
+    {
+        return length;
+    }
+    public int getWitdth()
+    {
+        return witdth;
+    }
+
+    public  int rectangle()
+    {
+        return getLength() * getWitdth();
+    }
+}
